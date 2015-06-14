@@ -1,0 +1,298 @@
+URxvt*geometry:                53x20
+URxvt.depth:  32
+URxvt.borderless: 1
+URxvt.scrollBar: false
+URxvt.saveLines: 5000
+URxvt.termName:  rxvt-unicode
+URxvt.urlLauncher: chromium
+URxvt.matcher.button: 1
+URxvt.cursorBlink: 1
+
+! Example of bitmap font
+!URxvt*font:               -misc-tamsyn-medium-*-*--14-101-*-*-*-*-*
+!URxvt*boldFont:           -misc-tamsyn-medium-*-*--14-101-*-*-*-*-*
+! Example of xft
+!URxvt*font:  xft:Terminus:size=9
+!URxvt*boldFont:  xft:Terminus:size=9
+URxvt*font: xft:Terminus: size=9,xft:Inconsolata for Powerline
+URxvt*boldFont: xft:Terminus: size=9   
+URxvt*italicFont: xft:Terminus: size=9
+URxvt*bolditalicFont: xft:Terminus: size=9
+
+! Plugins
+URxvt.perl-ext-common:      default,clipboard
+URxvt.iso14755: False
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.keysym.F11: perl:fullscreen:switch
+URxvt.clipboard.autocopy: true
+
+! Color Scheme
+*background:#242424
+*foreground:#e8e9ca
+! black
+*color0: #1C1C1C
+*color8: #404040
+! red
+*color1: #B85335
+*color9: #CF6A4C
+! green
+*color2: #799D6A
+*color10: #99AD6A
+! yellow
+*color3: #FFB964
+*color11: #FAD07A
+! blue
+*color4: #667899
+*color12: #8197BF
+! magenta
+*color5: #8787AF
+*color13: #C6B6EE
+! cyan
+*color6: #668799
+*color14: #8FBFDC
+! white
+*color7: #888888
+*color15: #E8E8D3
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
