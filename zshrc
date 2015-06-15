@@ -51,7 +51,10 @@ plugins=(git)
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 # export MANPATH="/usr/local/man:$MANPATH"
-
+export WORKON_HOME=~/workspace/envs/
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
