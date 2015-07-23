@@ -55,6 +55,7 @@ set number
 au WinLeave * set nocursorline nocursorcolumn
 au WinEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
+set t_Co=256
 
 " Ignore some file
 set wildignore=*.swp,*.bak,*.pyc,*.class
@@ -129,6 +130,9 @@ let g:ycm_complete_in_strings = 1 " Completion in string
 "i MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
 "i MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
+" Cycle through buffers
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
 
 python << EOF
 import vim
@@ -140,7 +144,7 @@ def SetBreakpoint():
     strWhite = re.search( '^(\s*)', strLine).group(1)
 
     vim.current.buffer.append(
-       "%(space)sipdb.set_trace() %(mark)s Breakpoint %(mark)s" %
+       "%(space)sipdb.set_trace() %(space) %(mark)s Breakpoint %(mark)s" %
          {'space':strWhite, 'mark': '#' * 30}, nLine - 1)
 
     for strLine in vim.current.buffer:
