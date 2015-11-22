@@ -143,8 +143,6 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
-
 #make notifications behave
 for_window [class="Xfce4-notifyd"] floating enable
 for_window [class="Xfce4-notifyd"] border none
