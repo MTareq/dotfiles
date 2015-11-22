@@ -132,10 +132,16 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "i MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
 "i MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
+<<<<<<< HEAD
 "Cycle through buffers
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
+=======
+" Cycle through buffers
+nnoremap <Tab> :bnext<CR>
+nnoremap <S-Tab> :bprevious<CR>
+>>>>>>> 6d97bed64dc0c57af13a308b86450b9ea36d5d34
 
 python << EOF
 import vim
@@ -147,7 +153,7 @@ def SetBreakpoint():
     strWhite = re.search( '^(\s*)', strLine).group(1)
 
     vim.current.buffer.append(
-       "%(space)sipdb.set_trace() %(mark)s Breakpoint %(mark)s" %
+       "%(space)sipdb.set_trace() %(space) %(mark)s Breakpoint %(mark)s" %
          {'space':strWhite, 'mark': '#' * 30}, nLine - 1)
 
     for strLine in vim.current.buffer:

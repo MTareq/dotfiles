@@ -8,7 +8,11 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
+<<<<<<< HEAD
 files="bashrc vimrc vim zshrc oh-my-zsh xinitrc i3 Xresources fonts"    # list of files/folders to symlink in homedir
+=======
+files="bashrc vimrc vim fonts zshrc oh-my-zsh xinitrc i3 Xresources"    # list of files/folders to symlink in homedir
+>>>>>>> 6d97bed64dc0c57af13a308b86450b9ea36d5d34
 
 ##########
 
