@@ -20,6 +20,12 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 Plugin 'bling/vim-airline'
 Plugin 'majutsushi/tagbar'
+Plugin 'mxw/vim-jsx'
+Plugin 'pangloss/vim-javascript'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'Quramy/tsuquyomi'
+Plugin 'Quramy/vim-js-pretty-template'
 
 
 
@@ -75,6 +81,7 @@ set tw=500
 set ai "Auto indent
 set si "Smart indet
 set wrap "Wrap lines
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -98,6 +105,10 @@ let g:airline_powerline_fonts = 1
 "NerdTree 
 map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
+autocmd FileType nerdtree noremap <buffer> <Tab> <nop>
+autocmd FileType nerdtree noremap <buffer> <S-Tab> <nop>
+autocmd VimEnter * NERDTree
+
 
 "Python indentaion
 autocmd FileType python set sw=4
@@ -114,6 +125,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 let g:syntastic_python_checkers=['flake8']
 let g:syntastic_python_flake8_args = "--ignore=E501"
+let g:syntastic_javascript_checkers = ['eslint']
 
 "YCM settings
 let g:ycm_collect_identifiers_from_tags_files = 1 " Let YCM read tags from Ctags file
@@ -132,16 +144,18 @@ autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 "i MBEVisibleActiveNormal  guifg=#A6DB29 guibg=fg
 "i MBEVisibleActiveChanged guifg=#F1266F guibg=fg
 
-<<<<<<< HEAD
 "Cycle through buffers
 nnoremap <Tab> :bnext<CR>
 nnoremap <S-Tab> :bprevious<CR>
 
-=======
-" Cycle through buffers
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprevious<CR>
->>>>>>> 6d97bed64dc0c57af13a308b86450b9ea36d5d34
+"Moving through windows
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+"jsx settings
+let g:jsx_ext_required = 0
 
 python << EOF
 import vim
@@ -153,7 +167,7 @@ def SetBreakpoint():
     strWhite = re.search( '^(\s*)', strLine).group(1)
 
     vim.current.buffer.append(
-       "%(space)sipdb.set_trace() %(space) %(mark)s Breakpoint %(mark)s" %
+       "%(space)sipdb.set_trace() %(space)s %(mark)s Breakpoint %(mark)s" %
          {'space':strWhite, 'mark': '#' * 30}, nLine - 1)
 
     for strLine in vim.current.buffer:
