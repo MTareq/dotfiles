@@ -53,13 +53,17 @@ plugins=(git)
 
 # User configuration
 
-export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=./node_modules/.bin:$HOME/node_modules/.bin:$HOME/npm-global/bin:$PATH
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
-
+export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH=$PATH:$HOME/bin
 # export MANPATH="/usr/local/man:$MANPATH"
-
+export WORKON_HOME=~/workspace/envs/
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+export GOROOT=/usr/lib/go
+export GOPATH=$HOME/.go
+export PATH="$PATH:$GOPATH/bin"
+export PATH="$PATH:$GOROOT/bin"
+source /usr/bin/virtualenvwrapper.sh
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
