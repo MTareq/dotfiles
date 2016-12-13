@@ -29,6 +29,7 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'rust-lang/rust.vim'
 Plugin 'leafo/moonscript-vim'
 Plugin 'quabug/vim-gdscript'
+Plugin 'Shougo/vimproc.vim'
 
 
 
@@ -158,7 +159,20 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 "jsx settings
-let g:jsx_ext_required = 0
+let g:jsx_ext_required = 1
+
+"js-pretty-template settings
+autocmd FileType typescript JsPreTmpl markdown
+autocmd FileType typescript syn clear foldBraces
+
+"tsuquyomi settings
+if !exists("g:ycm_semantic_triggers")
+  let g:ycm_semantic_triggers = {}
+endif
+let g:ycm_semantic_triggers['typescript'] = ['.']
+
+"vim ts settings
+
 
 python << EOF
 import vim
