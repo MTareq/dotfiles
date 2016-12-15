@@ -111,7 +111,7 @@ map <C-n> :NERDTreeToggle<CR>
 let NERDTreeIgnore = ['\.pyc$']
 autocmd FileType nerdtree noremap <buffer> <Tab> <nop>
 autocmd FileType nerdtree noremap <buffer> <S-Tab> <nop>
-autocmd VimEnter * NERDTree
+"autocmd VimEnter * NERDTree
 
 
 "Python indentaion
