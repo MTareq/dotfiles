@@ -62,8 +62,8 @@ set lazyredraw
 set showmode
 set wildmenu
 set number
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
+au BufLeave * set nocursorline nocursorcolumn
+au BufEnter * set cursorline cursorcolumn
 set cursorline cursorcolumn
 set t_Co=256
 
