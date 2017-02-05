@@ -27,6 +27,7 @@ Plugin 'Quramy/tsuquyomi'
 Plugin 'Quramy/vim-js-pretty-template'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rust-lang/rust.vim'
+Plugin 'fatih/vim-go'
 Plugin 'leafo/moonscript-vim'
 Plugin 'quabug/vim-gdscript'
 Plugin 'Shougo/vimproc.vim'
@@ -170,6 +171,8 @@ if !exists("g:ycm_semantic_triggers")
   let g:ycm_semantic_triggers = {}
 endif
 let g:ycm_semantic_triggers['typescript'] = ['.']
+let g:tsuquyomi_use_dev_node_module=2
+let g:tsuquyomi_tsserver_path='/home/tareq/npm-global/bin/tsserver'
 
 "vim ts settings
 
