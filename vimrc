@@ -30,6 +30,7 @@ Plugin 'rust-lang/rust.vim'
 Plugin 'leafo/moonscript-vim'
 Plugin 'quabug/vim-gdscript'
 Plugin 'Shougo/vimproc.vim'
+Plugin 'posva/vim-vue'
 
 
 

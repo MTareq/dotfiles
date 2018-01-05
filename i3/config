@@ -25,7 +25,7 @@ font pango:System San Francisco Display 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt -e /usr/bin/zsh
+bindsym $mod+Return exec kitty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -189,3 +189,7 @@ client.unfocused		    #d64937 #333333 #d64937	#000000
 
 new_window pixel 2 
 hide_edge_borders none
+
+#for godot to run in floating mode if the viewport is smaller than windowsize
+for_window [class="Godot"] floating enable
+for_window [title=".*Godot Engine*."] floating disable
