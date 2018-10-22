@@ -191,5 +191,11 @@ new_window pixel 2
 hide_edge_borders none
 
 #for godot to run in floating mode if the viewport is smaller than windowsize
-for_window [class="Godot"] floating enable
-for_window [title=".*Godot Engine*."] floating disable
+#for_window [class="Godot"] floating enable
+#for_window [title=".*Godot Engine*."] floating disable
+
+
+# i3 lock
+
+bindsym $MOD+SHIFT+x exec i3lock -i /home/tareq/Downloads/skull.png -c 000000
+

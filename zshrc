@@ -53,6 +53,7 @@ plugins=(git)
 
 # User configuration
 
+export EDITOR="vim"
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
 export PATH=$PATH:$HOME/bin
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -91,3 +92,12 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias google-chrome="google-chrome-stable"
+eval "$(direnv hook zsh)"
+
+function chpwd() {
+  if [ -r $PWD/.zsh_config ]; then
+    source $PWD/.zsh_config
+  else
+    source $HOME/.zshrc
+  fi
+}
